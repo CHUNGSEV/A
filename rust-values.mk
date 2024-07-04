@@ -11,7 +11,7 @@ unexport RUSTC_WRAPPER
 # Rust Environmental Vars
 RUSTC_HOST_SUFFIX:=$(word 4, $(subst -, ,$(GNU_HOST_NAME)))
 RUSTC_HOST_ARCH:=$(HOST_ARCH)-unknown-linux-$(RUSTC_HOST_SUFFIX)
-CARGO_HOME:=$(DL_DIR)/cargo
+CARGO_HOME:=$(STAGING_DIR)/host/cargo
 
 ifeq ($(CONFIG_USE_MUSL),y)
   # Force linking of the SSP library for musl
